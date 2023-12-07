@@ -47,7 +47,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Interactive Rating Component](https://www.frontendmentor.io/solutions/interactive-rating-component-jrxVRmYdbc)
+- Solution URL: [Interactive Rating Component](https://www.frontendmentor.io/solutions/interactive-rating-component-using-html-tailwindcss-and-js-iE_mRPtsFQ)
 - Live Site URL: [GitHub Pages](https://deon-gracias.github.io/interactive-rating-component/)
 
 ## My process
