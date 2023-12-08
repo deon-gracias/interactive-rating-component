@@ -1,0 +1,18 @@
+.card-gradient {
+  background: rgb(35, 42, 52);
+  background: radial-gradient(
+    circle at top center,
+    rgba(35, 42, 52, 1) 0%,
+    rgba(22, 29, 38, 1) 100%
+  );
+}
+
+label,
+button {
+  transition: 300ms;
+}
+
+input:checked + label {
+  background-color: #fb7713;
+  color: white;
+}
