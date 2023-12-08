@@ -1,143 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rating</title>
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rating</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet" />
 
-    <script>
-      tailwind.config = {
-        theme: {
-          fontFamily: {
-            sans: ["Overpass", "sans-serif"],
-          },
-          extend: {
-            colors: {
-              "light-grey": "hsl(217, 12%, 63%)",
-              "medium-grey": "hsl(216, 12%, 54%)",
-              "another-grey": "#262f37",
-              "dark-blue": "hsl(213, 19%, 18%)",
-              "very-dark-blue": "hsl(216, 12%, 8%)",
-              orange: "#fb7713",
-            },
-          },
-        },
-      };
-    </script>
-  </head>
-  <style>
-    .card-gradient {
-      background: rgb(35, 42, 52);
-      background: radial-gradient(
-        circle at top center,
-        rgba(35, 42, 52, 1) 0%,
-        rgba(22, 29, 38, 1) 100%
-      );
-    }
-
-    label,
-    button {
-      transition: 300ms;
-    }
-
-    input:checked + label {
-      background-color: #fb7713;
-      color: white;
-    }
-  </style>
-  <body class="bg-very-dark-blue text-white h-screen grid place-items-center px-5">
-    <div
-      class="card-gradient w-fit rounded-[25px] max-w-[400px] grid gap-4 p-8"
-    >
-      <div class="rounded-full bg-darkblue w-fit p-4 bg-dark-blue mb-3">
-        <img src="images/icon-star.svg" alt="Icon Star" />
-      </div>
-
-      <h1 class="text-3xl font-bold">How did we do?</h1>
-
-      <p class="text-slate-400">
-        Please let us know how we did with your support request all feedback is
-        appreciated to help us improve our offering
-      </p>
-
-      <div class="flex justify-between my-3">
-        <div>
-          <input value="1" type="radio" name="rating" id="1-input" class="hidden" />
-          <label
-            for="1-input"
-            class="rounded-full flex items-center font-bold justify-center hover:bg-light-grey hover:text-white w-12 h-12 bg-another-grey text-gray-500"
-          >
-            1
-          </label>
-        </div>
-        <div>
-          <input value="2" type="radio" name="rating" id="2-input" class="hidden" />
-          <label
-            for="2-input"
-            class="rounded-full flex items-center font-bold justify-center hover:bg-light-grey hover:text-white w-12 h-12 bg-another-grey text-gray-500"
-          >
-            2
-          </label>
-        </div>
-        <div>
-          <input value="3" type="radio" name="rating" id="3-input" class="hidden" />
-          <label
-            for="3-input"
-            class="rounded-full flex items-center font-bold justify-center hover:bg-light-grey hover:text-white w-12 h-12 bg-another-grey text-gray-500"
-          >
-            3
-          </label>
-        </div>
-        <div>
-          <input value="4" type="radio" name="rating" id="4-input" class="hidden" />
-          <label
-            for="4-input"
-            class="rounded-full flex items-center font-bold justify-center hover:bg-light-grey hover:text-white w-12 h-12 bg-another-grey text-gray-500"
-          >
-            4
-          </label>
-        </div>
-        <div>
-          <input value="5" type="radio" name="rating" id="5-input" class="hidden" />
-          <label
-            for="5-input"
-            class="rounded-full flex items-center font-bold justify-center hover:bg-light-grey hover:text-white w-12 h-12 bg-another-grey text-gray-500"
-          >
-            5
-          </label>
-        </div>
-      </div>
-
-      <button
-        id="submit"
-        class="bg-orange text-white hover:bg-white hover:text-orange rounded-full p-3 uppercase tracking-widest font-bold"
-      >
-        Submit
-      </button>
-    </div>
-  </body>
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
-    const submitBtn = document.getElementById("submit");
-    const thankYouCard = (rating) => `
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          sans: ["Overpass", "sans-serif"],
+        },
+        extend: {
+          colors: {
+            "light-grey": "hsl(217, 12%, 63%)",
+            "medium-grey": "hsl(216, 12%, 54%)",
+            "another-grey": "#262f37",
+            "dark-blue": "hsl(213, 19%, 18%)",
+            "very-dark-blue": "hsl(216, 12%, 8%)",
+            orange: "#fb7713",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<style>
+  .card-gradient {
+    background: rgb(35, 42, 52);
+    background: radial-gradient(circle at top center,
+        rgba(35, 42, 52, 1) 0%,
+        rgba(22, 29, 38, 1) 100%);
+  }
+
+  label,
+  button {
+    transition: 300ms;
+  }
+
+  input:checked+label {
+    background-color: #fb7713;
+    color: white;
+  }
+</style>
+
+<body class="bg-very-dark-blue text-white h-screen grid place-items-center px-5">
+  <div class="card-gradient w-fit rounded-[25px] max-w-[400px] grid gap-4 p-8">
+    <div class="rounded-full bg-darkblue w-fit p-4 bg-dark-blue mb-3">
+      <img role="img" src="images/icon-star.svg" alt="Icon Star" />
+    </div>
+
+    <h1 role="heading" class="text-3xl font-bold">How did we do?</h1>
+
+    <p role="doc-subtitle" class="text-slate-400">
+      Please let us know how we did with your support request all feedback is
+      appreciated to help us improve our offering
+    </p>
+
+    <div class="flex justify-between my-3">
+      <div role="radiogroup">
+        <input value="1" type="radio" role="radio" name="rating" id="1-input" class="hidden" />
+        <label for="1-input"
+          class="rounded-full flex items-center font-bold justify-center hover:bg-light-grey hover:text-white w-12 h-12 bg-another-grey text-gray-500">
+          1
+        </label>
+      </div>
+      <div>
+        <input value="2" type="radio" role="radio" name="rating" id="2-input" class="hidden" />
+        <label for="2-input"
+          class="rounded-full flex items-center font-bold justify-center hover:bg-light-grey hover:text-white w-12 h-12 bg-another-grey text-gray-500">
+          2
+        </label>
+      </div>
+      <div>
+        <input value="3" type="radio" role="radio" name="rating" id="3-input" class="hidden" />
+        <label for="3-input"
+          class="rounded-full flex items-center font-bold justify-center hover:bg-light-grey hover:text-white w-12 h-12 bg-another-grey text-gray-500">
+          3
+        </label>
+      </div>
+      <div>
+        <input value="4" type="radio" role="radio" name="rating" id="4-input" class="hidden" />
+        <label for="4-input"
+          class="rounded-full flex items-center font-bold justify-center hover:bg-light-grey hover:text-white w-12 h-12 bg-another-grey text-gray-500">
+          4
+        </label>
+      </div>
+      <div>
+        <input value="5" type="radio" role="radio" name="rating" id="5-input" class="hidden" />
+        <label for="5-input"
+          class="rounded-full flex items-center font-bold justify-center hover:bg-light-grey hover:text-white w-12 h-12 bg-another-grey text-gray-500">
+          5
+        </label>
+      </div>
+    </div>
+
+    <button id="submit" role="button"
+      class="bg-orange text-white hover:bg-white hover:text-orange rounded-full p-3 uppercase tracking-widest font-bold">
+      Submit
+    </button>
+  </div>
+</body>
+
+<script>
+  const submitBtn = document.getElementById("submit");
+  const thankYouCard = (rating) => `
     <div class="card-gradient w-fit rounded-[25px] max-w-[400px] grid place-items-center gap-7 px-6 py-10">
       <img
+        role="img"
         src="images/illustration-thank-you.svg"
         alt="Thank you illustration"
       />
@@ -147,8 +126,8 @@
       </div>
 
       <div class="grid gap-4 text-center mt-4">
-        <h1 class="font-bold text-3xl">Thank you!</h1>
-        <p class="text-slate-400 text-center">
+        <h1 role="heading" class="font-bold text-3xl">Thank you!</h1>
+        <p role="doc-subtitle" class="text-slate-400 text-center">
           We appreciate you taking the time to give a rating. If you ever need
           more support, don&apos;t hesitate to get in touch!
         </p>
@@ -156,9 +135,10 @@
     </div>
     `;
 
-    submitBtn.addEventListener("click", () => {
-      const rating = document.querySelector('input[name=rating]:checked').value;
-      document.body.innerHTML = thankYouCard(rating);
-    });
-  </script>
+  submitBtn.addEventListener("click", () => {
+    const rating = document.querySelector('input[name=rating]:checked').value;
+    document.body.innerHTML = thankYouCard(rating);
+  });
+</script>
+
 </html>
